@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>couch4ben-mvn-test</groupId>
+    <artifactId>couch4ben-mvn-test</artifactId>
+    <version>1.0</version>
+    <dependencies>
+        <dependency>
+            <groupId>couch4ben</groupId>
+            <artifactId>couch4ben</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.databene</groupId>
+                <artifactId>maven-benerator-plugin</artifactId>
+                <version>0.7.7</version>
+                <configuration>
+                    <descriptor>src/main/benerator/myproject.ben.xml</descriptor>
+                    <encoding>iso-8859-1</encoding>
+                    <dbDriver></dbDriver>
+                    <dbUrl>localhost:5984</dbUrl>
+                    <dbSchema></dbSchema>
+                    <dbUser>user</dbUser>
+                    <dbPassword>password</dbPassword>
+                    <xmlRoot/>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>couch4ben</groupId>
+                        <artifactId>couch4ben</artifactId>
+                        <version>1.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+    
+</project>

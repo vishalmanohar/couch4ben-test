@@ -1,0 +1,12 @@
+<setup>
+    <import platforms='couchdb' />
+    <couchdb database='couchdb'  environment='test' />
+    <generate type='mit_user' count='3' consumer='couchdb'>
+        	<attribute name='name' type='string' />
+        	<attribute name='age' type='int' min='18' max='78' />
+        	<part name='addresses' container='list' count='2'>
+            		<attribute name='street' pattern='[A-Z][a-z]{4} Street'/>
+            		<attribute name='houseNo' type='int' min='2' max='9' />
+            	</part>
+        </generate>
+    </setup>
