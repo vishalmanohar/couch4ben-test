@@ -1,6 +1,6 @@
 <setup>
     <import platforms='couchdb' />
-    <couchdb database='couchdb'  environment='test' />
+    <couchdb database='couchdb' name ='test_db'  environment='test' />
     <generate type='mit_user' count='3' consumer='couchdb'>
         	<attribute name='name' type='string' />
         	<attribute name='age' type='int' min='18' max='78' />
